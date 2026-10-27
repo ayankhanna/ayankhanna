@@ -6,25 +6,27 @@
 </p>
 
 <a href="https://www.buzzedtech.com">
-  <img src="./assets/buzzed-terminal.svg" alt="ayan@buzzed terminal: co-founder of Buzzed Technologies, 80+ projects shipped" width="100%"/>
+  <img src="./assets/buzzed-terminal.svg" alt="ayan@buzzed terminal: Buzzed ships AI systems you own. 80+ in production." width="100%"/>
 </a>
 
 ## Hey, I'm Ayan 👋
 
-I'm building [**Buzzed Technologies**](https://www.buzzedtech.com). We build AI agents, internal tools, and client-facing software, shaped around how *your* team already works.
+I'm co-founder of [**Buzzed**](https://www.buzzedtech.com). We're forward-deployed AI engineers for the real economy.
 
-You bring the workflow. We automate it. First release in weeks, not quarters.
+We embed with operating businesses (homebuilders, financial firms, medical practices, trading desks), find the work their teams still do by hand, and replace it with software that runs in production. Then we hand over the keys.
+
+**Agencies sell hours. SaaS sells seats. We ship AI systems you own.**
 
 ### Experience
-- 🐝 Co-founder @ [**Buzzed Technologies**](https://www.buzzedtech.com) (80+ projects shipped, 5M+ end-users reached)
+- 🐝 Co-founder @ [**Buzzed**](https://www.buzzedtech.com): 80+ systems live in production, inside companies doing $50B+ a year
 - 🪐 Product @ [**Saturn**](https://joinsaturn.com), the social calendar app for students
 
 ### Background
-- 💜 Ex-[**Northwestern**](https://www.northwestern.edu)
+- 🎓 Ex-[**Northwestern**](https://www.northwestern.edu)
 - 🗽 Based in NYC
 - 🐦 Thoughts out loud: [@ayan_khanna21](https://x.com/ayan_khanna21)
 - 📸 Unfiltered archive: [@archivesofayan](https://www.instagram.com/archivesofayan/)
 
 <br/>
 
-<a href="https://www.buzzedtech.com"><img src="./assets/cta.svg" alt="Bring your workflows to Buzzed →" height="44"/></a>
+<a href="https://www.buzzedtech.com"><img src="./assets/cta.svg" alt="Show us the work you still do by hand →" height="44"/></a>

@@ -38,27 +38,32 @@ PROMPT_LEN = sum(len(t) for t, _ in PROMPT)
 # ("cmd", text) | ("out", [(text, color), ...]) | ("bar", label, pct, value) | ("blank",)
 SCRIPT = [
     ("cmd", "whoami"),
-    ("out", [("Ayan Khanna", "fg"), (" — co-founder @ ", "dim"), ("Buzzed Technologies", "amber"), ("  (NYC)", "dim")]),
+    ("out", [("Ayan Khanna", "fg"), (" — co-founder @ ", "dim"), ("Buzzed", "amber"), ("  (NYC)", "dim")]),
     ("blank",),
-    ("cmd", "cat buzzed.config"),
-    ("out", [("  mission  ", "dim"), ('"Bring your workflows. We\'ll automate them."', "green")]),
-    ("out", [("  builds   ", "dim"), ("AI agents · internal tools · client-facing apps", "fg")]),
-    ("out", [("  ships    ", "dim"), ("first release in weeks, not quarters", "fg")]),
+    ("cmd", "cat ~/buzzed/thesis.md"),
+    ("out", [("  Agencies sell hours. SaaS sells seats.", "dim")]),
+    ("out", [("  We ship AI systems you own.", "green")]),
     ("blank",),
-    ("cmd", "buzzed stats --live"),
-    ("bar", "projects shipped", 1.00, "80+"),
-    ("bar", "avg. time to ship", 0.18, "3 wks"),
-    ("bar", "client revenue", 0.92, "$50B+"),
-    ("bar", "end-users reached", 0.78, "5M+"),
+    ("cmd", "buzzed --help"),
+    ("out", [("  what   ", "dim"), ("forward-deployed AI engineers for the real economy", "fg")]),
+    ("out", [("  how    ", "dim"), ("embed with your team, find the work done by hand,", "fg")]),
+    ("out", [("         ", "dim"), ("replace it with software that runs in production", "fg")]),
+    ("out", [("  you    ", "dim"), ("own the code. no seats. no lock-in. no retainer.", "fg")]),
+    ("blank",),
+    ("cmd", "buzzed status --prod"),
+    ("bar", "systems in prod", 1.00, "80+"),
+    ("bar", "idea → production", 0.18, "3 wks"),
+    ("bar", "customer rev / yr", 0.92, "$50B+"),
+    ("bar", "people it touches", 0.78, "5M+"),
     ("blank",),
     ("cmd", "ls ~/past-lives"),
     ("out", [("northwestern/", "purple"), ("    ", "fg"), ("saturn/", "blue"), ("    ", "fg"), ("4am-deploys/", "red")]),
     ("blank",),
-    ("cmd", "buzzed deploy --client you"),
-    ("out", [("  ✓ ", "green"), ("scoping your workflow ........ ", "dim"), ("done", "green")]),
-    ("out", [("  ✓ ", "green"), ("wiring up agents ............. ", "dim"), ("done", "green")]),
-    ("out", [("  ✓ ", "green"), ("human in the loop ............ ", "dim"), ("on", "green")]),
-    ("out", [("  ➜ ", "amber"), ("live in ~3 weeks  ", "fg"), ("buzzedtech.com", "amber")]),
+    ("cmd", "buzzed deploy --company yours"),
+    ("out", [("  ✓ ", "green"), ("shadowing your ops team ...... ", "dim"), ("done", "green")]),
+    ("out", [("  ✓ ", "green"), ("agents in production ......... ", "dim"), ("live", "green")]),
+    ("out", [("  ✓ ", "green"), ("handing over the keys ........ ", "dim"), ("yours", "green")]),
+    ("out", [("  ➜ ", "amber"), ("next up: your company  ", "fg"), ("buzzedtech.com", "amber")]),
     ("blank",),
     ("final",),
 ]
@@ -131,7 +136,7 @@ def build():
                 t += AFTER_BLOCK
 
     H = int(y + LH)
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Terminal: Ayan Khanna, co-founder of Buzzed Technologies">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Terminal: Ayan Khanna, co-founder of Buzzed, forward-deployed AI engineers">
 <style>
 text{{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;font-size:{FONT}px;white-space:pre}}
 @keyframes show{{from{{opacity:0}}to{{opacity:1}}}}
