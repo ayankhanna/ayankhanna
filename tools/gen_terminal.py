@@ -65,7 +65,7 @@ SCRIPT = [
     ("out", [("    ", "fg"), ("the largest private companies in America", "amber")]),
     ("blank",),
     ("cmd", "ls ~/past-lives"),
-    ("out", [("northwestern/", "purple"), ("    ", "fg"), ("saturn/", "blue"), (" (exit: snap)", "snap"), ("    ", "fg"), ("4am-deploys/", "red")]),
+    ("out", [("northwestern/", "purple"), ("neuro", "fg"), ("    ", "fg"), ("saturn/", "blue"), ("product,ops,eng", "fg"), ("    ", "fg"), ("4am-deploys/", "red")]),
     ("blank",),
     ("cmd", "buzzed deploy --company yours"),
     ("out", [("  ✓ ", "green"), ("built around your workflow ..... ", "dim"), ("done", "green")]),

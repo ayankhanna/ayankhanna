@@ -22,10 +22,6 @@ Some things we've done:
 - Helped one of the largest private companies in America boost their talent acquisition funnel
 - 80+ systems live in production, inside companies doing $50B+ a year combined
 
-### Before Buzzed
-- Product at [**Saturn**](https://joinsaturn.com), the social calendar app for students. We got acquired by **Snap**.
-- Went to [Northwestern](https://www.northwestern.edu)
-
 ### Elsewhere
 - I occasionally post on [Twitter](https://x.com/ayan_khanna21)
 - Sometimes I remember to update [this Instagram](https://www.instagram.com/archivesofayan/)
