@@ -6,14 +6,16 @@
 </p>
 
 <a href="https://www.buzzedtech.com">
-  <img src="./assets/buzzed-terminal.svg" alt="ayan@buzzed terminal: Buzzed, forward-deployed AI engineers. 80+ systems in production." width="100%"/>
+  <img src="./assets/buzzed-terminal.svg" alt="ayan@buzzed terminal: Buzzed, SaaS but built for you. 80+ systems in production." width="100%"/>
 </a>
 
 ## Hey, I'm Ayan
 
-I'm co-founder of [**Buzzed**](https://www.buzzedtech.com). We're forward-deployed AI engineers. We find the work your team still does by hand and replace it with software that actually runs in production.
+I'm co-founder of [**Buzzed**](https://www.buzzedtech.com). We build every company its own SaaS: software made for how they actually work, with the automations baked in. Then we run it for them.
 
-**Agencies sell hours. SaaS sells seats. We ship AI that works.**
+Off-the-shelf software made sense when building your own was expensive. AI changed that.
+
+**Agencies bill hours and leave. We ship software and stay.**
 
 Some things we've done:
 - Built a customer-facing agent that helped sell a $4M home

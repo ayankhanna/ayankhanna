@@ -42,11 +42,13 @@ SCRIPT = [
     ("out", [("prev: ", "dim"), ("product @ Saturn", "fg"), ("  ➜  ", "dim"), ("acquired by Snap", "snap")]),
     ("blank",),
     ("cmd", "cat ~/buzzed/README"),
-    ("out", [("  Forward-deployed AI engineers for the real economy.", "fg")]),
-    ("out", [("  We find the work your team still does by hand, and make it disappear.", "dim")]),
+    ("out", [("  SaaS, but built for you.", "amber")]),
+    ("out", [("  Every company gets its own software, automations baked in. We run it.", "dim")]),
     ("blank",),
     ("cmd", "git diff your-company/before your-company/after"),
-    ("out", [("- ", "red"), ("your team copy-pasting between six tabs all day", "red")]),
+    ("out", [("- ", "red"), ("bending your workflow around six SaaS tools", "red")]),
+    ("out", [("+ ", "green"), ("one system built around how you actually work", "green")]),
+    ("out", [("- ", "red"), ("your team copy-pasting between tabs all day", "red")]),
     ("out", [("+ ", "green"), ("an agent does it. a human signs off on the edge cases.", "green")]),
     ("out", [("- ", "red"), ('"we\'ll get to it next quarter"', "red")]),
     ("out", [("+ ", "green"), ("in production in 3 weeks", "green")]),
@@ -66,8 +68,9 @@ SCRIPT = [
     ("out", [("northwestern/", "purple"), ("    ", "fg"), ("saturn/", "blue"), (" (exit: snap)", "snap"), ("    ", "fg"), ("4am-deploys/", "red")]),
     ("blank",),
     ("cmd", "buzzed deploy --company yours"),
-    ("out", [("  ✓ ", "green"), ("shadowing your ops team ...... ", "dim"), ("done", "green")]),
-    ("out", [("  ✓ ", "green"), ("agents in production ......... ", "dim"), ("live", "green")]),
+    ("out", [("  ✓ ", "green"), ("built around your workflow ..... ", "dim"), ("done", "green")]),
+    ("out", [("  ✓ ", "green"), ("agents in production ........... ", "dim"), ("live", "green")]),
+    ("out", [("  ✓ ", "green"), ("we keep it running ............. ", "dim"), ("always", "green")]),
     ("out", [("  ➜ ", "amber"), ("next up: your company  ", "fg"), ("buzzedtech.com", "amber")]),
     ("blank",),
     ("final",),
@@ -143,7 +146,7 @@ def build():
                 t += AFTER_BLOCK
 
     H = int(y + LH)
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Terminal: Ayan Khanna, co-founder of Buzzed, forward-deployed AI engineers">
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Terminal: Ayan Khanna, co-founder of Buzzed. SaaS, but built for you.">
 <style>
 text{{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;font-size:{FONT}px;white-space:pre}}
 @keyframes show{{from{{opacity:0}}to{{opacity:1}}}}
