@@ -21,7 +21,7 @@ TOP = 44           # below the title bar
 C = {
     "bg": "#0b0e14", "bar": "#161b22", "border": "#30363d",
     "fg": "#c9d1d9", "dim": "#6e7681", "amber": "#fbbf24", "green": "#3fb950",
-    "blue": "#58a6ff", "purple": "#b392f0", "red": "#ff7b72", "track": "#21262d",
+    "blue": "#58a6ff", "purple": "#b392f0", "red": "#ff7b72", "track": "#21262d", "snap": "#fffc00",
 }
 
 # ---- timing (seconds) ----------------------------------------------------
@@ -39,16 +39,17 @@ PROMPT_LEN = sum(len(t) for t, _ in PROMPT)
 SCRIPT = [
     ("cmd", "whoami"),
     ("out", [("Ayan Khanna", "fg"), (" — co-founder @ ", "dim"), ("Buzzed", "amber"), ("  (NYC)", "dim")]),
+    ("out", [("prev: ", "dim"), ("product @ Saturn", "fg"), ("  ➜  ", "dim"), ("acquired by Snap", "snap")]),
     ("blank",),
-    ("cmd", "cat ~/buzzed/thesis.md"),
-    ("out", [("  Agencies sell hours. SaaS sells seats.", "dim")]),
-    ("out", [("  We ship AI systems you own.", "green")]),
+    ("cmd", "cat ~/buzzed/README"),
+    ("out", [("  Forward-deployed AI engineers for the real economy.", "fg")]),
+    ("out", [("  We find the work your team still does by hand, and make it disappear.", "dim")]),
     ("blank",),
-    ("cmd", "buzzed --help"),
-    ("out", [("  what   ", "dim"), ("forward-deployed AI engineers for the real economy", "fg")]),
-    ("out", [("  how    ", "dim"), ("embed with your team, find the work done by hand,", "fg")]),
-    ("out", [("         ", "dim"), ("replace it with software that runs in production", "fg")]),
-    ("out", [("  you    ", "dim"), ("own the code. no seats. no lock-in. no retainer.", "fg")]),
+    ("cmd", "git diff your-company/before your-company/after"),
+    ("out", [("- ", "red"), ("your team copy-pasting between six tabs all day", "red")]),
+    ("out", [("+ ", "green"), ("an agent does it. a human signs off on the edge cases.", "green")]),
+    ("out", [("- ", "red"), ('"we\'ll get to it next quarter"', "red")]),
+    ("out", [("+ ", "green"), ("in production in 3 weeks", "green")]),
     ("blank",),
     ("cmd", "buzzed status --prod"),
     ("bar", "systems in prod", 1.00, "80+"),
@@ -56,13 +57,17 @@ SCRIPT = [
     ("bar", "customer rev / yr", 0.92, "$50B+"),
     ("bar", "people it touches", 0.78, "5M+"),
     ("blank",),
+    ("cmd", "buzzed log --wins"),
+    ("out", [("  ★ ", "amber"), ("customer-facing agent helped sell a ", "fg"), ("$4M home", "amber")]),
+    ("out", [("  ★ ", "amber"), ("boosted the talent acquisition funnel at one of", "fg")]),
+    ("out", [("    ", "fg"), ("the largest private companies in America", "amber")]),
+    ("blank",),
     ("cmd", "ls ~/past-lives"),
-    ("out", [("northwestern/", "purple"), ("    ", "fg"), ("saturn/", "blue"), ("    ", "fg"), ("4am-deploys/", "red")]),
+    ("out", [("northwestern/", "purple"), ("    ", "fg"), ("saturn/", "blue"), (" (exit: snap)", "snap"), ("    ", "fg"), ("4am-deploys/", "red")]),
     ("blank",),
     ("cmd", "buzzed deploy --company yours"),
     ("out", [("  ✓ ", "green"), ("shadowing your ops team ...... ", "dim"), ("done", "green")]),
     ("out", [("  ✓ ", "green"), ("agents in production ......... ", "dim"), ("live", "green")]),
-    ("out", [("  ✓ ", "green"), ("handing over the keys ........ ", "dim"), ("yours", "green")]),
     ("out", [("  ➜ ", "amber"), ("next up: your company  ", "fg"), ("buzzedtech.com", "amber")]),
     ("blank",),
     ("final",),
@@ -103,10 +108,12 @@ def build():
                 break
             # a cover that slides right one character at a time, dragging the cursor with it
             dur = max(len(cmd), 1) * TYPE
-            rows.append(f'<g class="{cls}t"><rect x="{x_cmd:.1f}" y="{y - FONT - 2:.1f}" width="{W:.0f}" height="{LH}" fill="{C["bg"]}"/>'
+            rows.append(f'<g class="{cls}t"><rect class="{cls}k" x="{x_cmd:.1f}" y="{y - FONT - 2:.1f}" width="{W:.0f}" height="{LH}" fill="{C["bg"]}"/>'
                         f'<rect class="{cls}c" x="{x_cmd:.1f}" y="{y - FONT + 1:.1f}" width="{CW:.1f}" height="{FONT + 3}" fill="{C["amber"]}"/></g></g>')
             css.append(f".{cls}t{{animation:type{n} {dur:.2f}s steps({len(cmd)}) {t + 0.15:.2f}s both}}"
                        f"@keyframes type{n}{{from{{transform:translateX(0)}}to{{transform:translateX({len(cmd) * CW:.1f}px)}}}}")
+            # drop the cover once typing ends, in case steps() stops a character short
+            css.append(f".{cls}k{{animation:hide .01s linear {t + 0.15 + dur + 0.02:.2f}s both}}")
             css.append(f".{cls}c{{animation:hide .01s linear {t + 0.15 + dur + AFTER_CMD:.2f}s both}}")
             t += 0.15 + dur + AFTER_CMD
 

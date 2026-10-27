@@ -6,26 +6,28 @@
 </p>
 
 <a href="https://www.buzzedtech.com">
-  <img src="./assets/buzzed-terminal.svg" alt="ayan@buzzed terminal: Buzzed ships AI systems you own. 80+ in production." width="100%"/>
+  <img src="./assets/buzzed-terminal.svg" alt="ayan@buzzed terminal: Buzzed, forward-deployed AI engineers. 80+ systems in production." width="100%"/>
 </a>
 
-## Hey, I'm Ayan 👋
+## Hey, I'm Ayan
 
-I'm co-founder of [**Buzzed**](https://www.buzzedtech.com). We're forward-deployed AI engineers for the real economy.
+I'm co-founder of [**Buzzed**](https://www.buzzedtech.com). We're forward-deployed AI engineers. We find the work your team still does by hand and replace it with software that actually runs in production.
 
-We embed with operating businesses (homebuilders, financial firms, medical practices, trading desks), find the work their teams still do by hand, and replace it with software that runs in production. Then we hand over the keys.
+**Agencies sell hours. SaaS sells seats. We ship AI that works.**
 
-**Agencies sell hours. SaaS sells seats. We ship AI systems you own.**
+Some things we've done:
+- Built a customer-facing agent that helped sell a $4M home
+- Helped one of the largest private companies in America boost their talent acquisition funnel
+- 80+ systems live in production, inside companies doing $50B+ a year combined
 
-### Experience
-- 🐝 Co-founder @ [**Buzzed**](https://www.buzzedtech.com): 80+ systems live in production, inside companies doing $50B+ a year
-- 🪐 Product @ [**Saturn**](https://joinsaturn.com), the social calendar app for students
+### Before Buzzed
+- Product at [**Saturn**](https://joinsaturn.com), the social calendar app for students. We got acquired by **Snap**.
+- Went to [Northwestern](https://www.northwestern.edu)
 
-### Background
-- 🎓 Ex-[**Northwestern**](https://www.northwestern.edu)
-- 🗽 Based in NYC
-- 🐦 Thoughts out loud: [@ayan_khanna21](https://x.com/ayan_khanna21)
-- 📸 Unfiltered archive: [@archivesofayan](https://www.instagram.com/archivesofayan/)
+### Elsewhere
+- I occasionally post on [Twitter](https://x.com/ayan_khanna21)
+- Sometimes I remember to update [this Instagram](https://www.instagram.com/archivesofayan/)
+- Based in NYC
 
 <br/>
 
